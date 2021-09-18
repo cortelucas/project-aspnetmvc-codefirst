@@ -1,3 +1,5 @@
+using System;
+
 namespace ProjectAspNetCodeFirst.Models
 {
     public class Livro
