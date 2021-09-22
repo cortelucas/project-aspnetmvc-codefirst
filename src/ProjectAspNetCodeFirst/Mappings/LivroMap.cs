@@ -29,6 +29,11 @@ namespace ProjectAspNetCodeFirst.Mappings
 
             builder.HasIndex(p => p.Titulo)
                 .HasDatabaseName("IX_Livro_Titulo");
+
+            builder.HasOne(p => p.Categoria)
+                .WithMany(p => p.Livros)
+                .HasForeignKey(p => p.CategoriaID)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
